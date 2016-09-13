@@ -577,6 +577,36 @@
                 <scope>test</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+<profiles>
+        <profile>
+            <id>autoInstallBundle</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+  
+
+
+    <modules>
+        <module>aem-parent</module>
+        <module>bundles/commons</module>
+        <module>bundles/core</module>
+        <module>package</module>
+    </modules>
+</project>
 
 </project>
