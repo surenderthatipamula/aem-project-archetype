@@ -577,6 +577,7 @@
                 <scope>test</scope>
             </dependency>
         </dependencies>
+        </dependencyManagement>
 <profiles>
         <profile>
             <id>autoInstallBundle</id>
